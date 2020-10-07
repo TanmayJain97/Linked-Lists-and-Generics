@@ -1,7 +1,7 @@
 # Linked-Lists-and-Generics
 
-Modified to UC 8 - Created Linked List by adding 56.
+Modified to UC 9 - Created Linked List by adding 56.
 
-70 and 30 is appended to same list.
+30, 40 and 70 is appended to same list sequentially.
 
-40 is inserted after 30
+40 is removed and new size of Linked List is returned.
