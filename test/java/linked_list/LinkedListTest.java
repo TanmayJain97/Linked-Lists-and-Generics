@@ -14,15 +14,15 @@ public class LinkedListTest {
 	@Before
 	public void init() {
 		//Passing key value
-		Node1 = new LinkedListNode<Integer>(56);
+		Node1 = new LinkedListNode<Integer>(70);
 		Node2 = new LinkedListNode<Integer>(30);
-		Node3 = new LinkedListNode<Integer>(70);
+		Node3 = new LinkedListNode<Integer>(56);
 		LinkedList = new LinkedListClass<Integer>();
 		
 		//Appending
-		LinkedList.append(Node3);
+		LinkedList.add(Node1);
 		LinkedList.append(Node2);
-		LinkedList.append(Node1);
+		LinkedList.append(Node3);
 	}
 	
 	//Checking for append of all 3 values
