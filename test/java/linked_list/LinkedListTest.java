@@ -24,27 +24,27 @@ public class LinkedListTest {
 		LinkedList.append(Node2);
 		LinkedList.append(Node3);
 		
-		//Display Original List
-		System.out.println("Original List ->");
-		LinkedList.showList();
-		
-		//pop out from tail
-		LinkedList.popLast();
-		
-		//Display new List
-		System.out.println("New List ->");
+		//Display List
 		LinkedList.showList();
 	}
 	
-	//Checking for removal of head
-
+	//Checking for position of elements
 	@Test
-	public void WhenNode3poppedNode1ShouldRemainSame() {
-		assertTrue((LinkedList.headNode).equals(Node1));
+	public void When56SearchedPosition1isReturned() {
+		assertEquals(1,LinkedList.search(56));
 	}
 	
 	@Test
-	public void WhenNode3poppedNode2ShouldBecomeTail() {
-		assertTrue((LinkedList.tailNode).equals(Node2));
+	public void When30SearchedPosition2isReturned() {
+		assertEquals(2,LinkedList.search(30));
+	}
+	
+	public void When70SearchedPosition3isReturned() {
+		assertEquals(3,LinkedList.search(70));
+	}
+	
+	@Test
+	public void When99SearchedNotFoundMessageisPrinted() {
+		assertEquals((-1),LinkedList.search(99));
 	}
 }
