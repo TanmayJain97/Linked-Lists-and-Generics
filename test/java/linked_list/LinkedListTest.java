@@ -14,9 +14,9 @@ public class LinkedListTest {
 	@Before
 	public void init() {
 		//Passing key value
-		Node1 = new LinkedListNode<Integer>(70);
+		Node1 = new LinkedListNode<Integer>(56);
 		Node2 = new LinkedListNode<Integer>(30);
-		Node3 = new LinkedListNode<Integer>(56);
+		Node3 = new LinkedListNode<Integer>(70);
 		LinkedList = new LinkedListClass<Integer>();
 		
 		//Appending
