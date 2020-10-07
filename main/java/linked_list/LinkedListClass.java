@@ -74,18 +74,24 @@ public class LinkedListClass<Key> {
 		System.out.println("Removed "+tempNode.getKey()+" from Linked List.");
 	}
 	
-	public int search(Key data) {
+	public LinkedListNode<Key> search(Key data) {
 		LinkedListFunction<Key> tempNode=headNode;
-		int index=1;
 		while(tempNode!=null && tempNode.getNextNode()!=null) {
 			if ((tempNode.getKey()).equals(data)) {
-				return index;
+				return (LinkedListNode<Key>) tempNode;
 			}
-			index++;
 			tempNode=tempNode.getNextNode();
 		}
 		
 		System.out.println("No such value exists in LinkedList.");
-		return -1;
+		return (LinkedListNode<Key>) tailNode;
+	}
+	
+	public void insertAfter(Key before_data,Key data) {
+		LinkedListNode<Key> before_Node=search(before_data);
+		LinkedListNode<Key> newNode=new LinkedListNode<Key>(data);
+		
+		//inserting
+		insert(before_Node, newNode);
 	}
 }
