@@ -28,8 +28,8 @@ public class LinkedListTest {
 		System.out.println("Original List ->");
 		LinkedList.showList();
 		
-		//pop out from head
-		LinkedList.pop();
+		//pop out from tail
+		LinkedList.popLast();
 		
 		//Display new List
 		System.out.println("New List ->");
@@ -39,12 +39,12 @@ public class LinkedListTest {
 	//Checking for removal of head
 
 	@Test
-	public void WhenNode1poppedNode2ShouldBecomeHead() {
-		assertTrue((LinkedList.headNode).equals(Node2));
+	public void WhenNode3poppedNode1ShouldRemainSame() {
+		assertTrue((LinkedList.headNode).equals(Node1));
 	}
 	
 	@Test
-	public void WhenNode1poppedNode3ShouldBecomeSecondNode() {
-		assertTrue(((LinkedList.headNode).getNextNode()).equals(Node3));
+	public void WhenNode3poppedNode2ShouldBecomeTail() {
+		assertTrue((LinkedList.tailNode).equals(Node2));
 	}
 }
