@@ -1,18 +1,18 @@
 package linked_list;
 
 import static org.junit.Assert.*;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class LinkedListTest {
 
-	LinkedListClass<Integer> LinkedList;
-	private LinkedListNode<Integer> Node1;
-	private LinkedListNode<Integer> Node2;
-	private LinkedListNode<Integer> Node3;
+	static LinkedListClass<Integer> LinkedList;
+	static private LinkedListNode<Integer> Node1;
+	static private LinkedListNode<Integer> Node2;
+	static private LinkedListNode<Integer> Node3;
 	
-	@Before
-	public void init() {
+	@BeforeClass
+	public static void init() {
 		//Passing key value
 		Node1 = new LinkedListNode<Integer>(56);
 		Node2 = new LinkedListNode<Integer>(30);
@@ -23,6 +23,7 @@ public class LinkedListTest {
 		LinkedList.add(Node1);
 		LinkedList.append(Node2);
 		LinkedList.append(Node3);
+		LinkedList.showList();
 	}
 	
 	//Checking for append of all 3 values
