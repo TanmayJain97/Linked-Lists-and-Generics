@@ -73,4 +73,19 @@ public class LinkedListClass<Key> {
 		tailNode.setNextNode(null);
 		System.out.println("Removed "+tempNode.getKey()+" from Linked List.");
 	}
+	
+	public int search(Key data) {
+		LinkedListFunction<Key> tempNode=headNode;
+		int index=1;
+		while(tempNode!=null && tempNode.getNextNode()!=null) {
+			if ((tempNode.getKey()).equals(data)) {
+				return index;
+			}
+			index++;
+			tempNode=tempNode.getNextNode();
+		}
+		
+		System.out.println("No such value exists in LinkedList.");
+		return -1;
+	}
 }
