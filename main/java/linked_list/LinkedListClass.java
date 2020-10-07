@@ -57,4 +57,10 @@ public class LinkedListClass<Key> {
 		beforeNode.setNextNode(newNode);
 		newNode.setNextNode(tempNode);
 	}
+	
+	public void pop() {
+		LinkedListFunction<Key> tempNode=headNode;
+		headNode=headNode.getNextNode();
+		System.out.println("Removed "+tempNode.getKey()+" from Linked List.");
+	}
 }
