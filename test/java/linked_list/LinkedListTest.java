@@ -21,28 +21,30 @@ public class LinkedListTest {
 		
 		//Appending
 		LinkedList.add(Node1);
+		LinkedList.append(Node2);
 		LinkedList.append(Node3);
 		
-		//Inserting
-		LinkedList.insert(Node1, Node2);
+		//Display Original List
+		System.out.println("Original List ->");
+		LinkedList.showList();
 		
-		//Display
+		//pop out from head
+		LinkedList.pop();
+		
+		//Display new List
+		System.out.println("New List ->");
 		LinkedList.showList();
 	}
 	
-	//Checking for append of all 3 values
-	@Test
-	public void WhenNode1appendedShouldReturnTrue() {
-		assertTrue((LinkedList.headNode).equals(Node1));
-	}
+	//Checking for removal of head
 
 	@Test
-	public void WhenNode2appendedShouldReturnTrue() {
-		assertTrue(((LinkedList.headNode).getNextNode()).equals(Node2));
+	public void WhenNode1poppedNode2ShouldBecomeHead() {
+		assertTrue((LinkedList.headNode).equals(Node2));
 	}
 	
 	@Test
-	public void WhenNode3appendedShouldReturnTrue() {
-		assertTrue((LinkedList.tailNode).equals(Node3));
+	public void WhenNode1poppedNode3ShouldBecomeSecondNode() {
+		assertTrue(((LinkedList.headNode).getNextNode()).equals(Node3));
 	}
 }
