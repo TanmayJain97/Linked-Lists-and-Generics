@@ -24,27 +24,26 @@ public class LinkedListTest {
 		LinkedList.append(Node2);
 		LinkedList.append(Node3);
 		
-		//Display List
+		//Display Original List
+		System.out.print("Original List=");
+		LinkedList.showList();
+		
+		//Inserting 40 after 30
+		LinkedList.insertAfter(30, 40);
+		
+		//Display New List
+		System.out.print("Original List=");
 		LinkedList.showList();
 	}
 	
-	//Checking for position of elements
+	//Checking for position of 40
 	@Test
-	public void When56SearchedPosition1isReturned() {
-		assertEquals(1,LinkedList.search(56));
+	public void When40SearchedItShouldLieBefore70() {
+		assertEquals(Node3,LinkedList.search(40).getNextNode());
 	}
 	
 	@Test
-	public void When30SearchedPosition2isReturned() {
-		assertEquals(2,LinkedList.search(30));
-	}
-	
-	public void When70SearchedPosition3isReturned() {
-		assertEquals(3,LinkedList.search(70));
-	}
-	
-	@Test
-	public void When99SearchedNotFoundMessageisPrinted() {
-		assertEquals((-1),LinkedList.search(99));
+	public void When40SearchedItShouldLieAfter30() {
+		assertEquals(40,(int)Node2.getNextNode().getKey());
 	}
 }
