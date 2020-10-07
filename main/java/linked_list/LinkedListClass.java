@@ -94,4 +94,18 @@ public class LinkedListClass<Key> {
 		//inserting
 		insert(before_Node, newNode);
 	}
+	
+	public int removeNode(Key data) {
+		LinkedListFunction<Key> tempNode=headNode;
+		int count=1;
+		while(tempNode!=null && tempNode.getNextNode()!=null) {
+			if ((tempNode.getNextNode().getKey()).equals(data)) {
+				System.out.println("Node containing "+data+" removed.");
+				tempNode.setNextNode((tempNode.getNextNode()).getNextNode());
+			}
+			count++;
+			tempNode=tempNode.getNextNode();
+		}
+		return count;
+	}
 }
