@@ -21,8 +21,12 @@ public class LinkedListTest {
 		
 		//Appending
 		LinkedList.add(Node1);
-		LinkedList.append(Node2);
 		LinkedList.append(Node3);
+		
+		//Inserting
+		LinkedList.insert(Node1, Node2);
+		
+		//Display
 		LinkedList.showList();
 	}
 	
