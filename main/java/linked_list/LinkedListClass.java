@@ -63,4 +63,14 @@ public class LinkedListClass<Key> {
 		headNode=headNode.getNextNode();
 		System.out.println("Removed "+tempNode.getKey()+" from Linked List.");
 	}
+	
+	public void popLast() {
+		LinkedListFunction<Key> tempNode=headNode;
+		while((!(tempNode.getNextNode()).equals(tailNode))) {
+			tempNode=tempNode.getNextNode();
+		}
+		tailNode=tempNode;
+		tailNode.setNextNode(null);
+		System.out.println("Removed "+tempNode.getKey()+" from Linked List.");
+	}
 }
