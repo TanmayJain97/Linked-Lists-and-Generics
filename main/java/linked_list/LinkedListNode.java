@@ -1,26 +1,36 @@
 package linked_list;
 
-public class LinkedListNode<Key> {
+public class LinkedListNode<Key> implements LinkedListFunction<Key> {
 
 	public Key key;
-	public LinkedListNode<Key> nextNode;
+	public LinkedListFunction<Key> nextNode;
 	
 	@Override
 	public String toString() {
-		return "LinkedListNode []";
+		return "Created Node: "+key;
 	}
 
 	public LinkedListNode(Key key) {
-		super();
 		this.key = key;
 		this.nextNode = null;
 	}
 
-	public LinkedListNode<Key> getNextNode() {
+	@Override
+	public LinkedListFunction<Key> getNextNode() {
 		return nextNode;
 	}
 
-	public void setNextNode(LinkedListNode<Key> nextNode) {
+	public void setNextNode(LinkedListFunction<Key> nextNode) {
 		this.nextNode = nextNode;
+	}
+
+	@Override
+	public Key getKey() {
+		return key;
+	}
+
+	@Override
+	public void setKey() {
+		this.key = key;
 	}
 }
