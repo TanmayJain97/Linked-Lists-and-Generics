@@ -1,5 +1,10 @@
 package linked_list;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class LinkedListClass<Key> {
 
 	public LinkedListFunction<Key> headNode;
@@ -107,5 +112,28 @@ public class LinkedListClass<Key> {
 			tempNode=tempNode.getNextNode();
 		}
 		return count;
+	}
+	
+	public void makeOrderedList() {
+		LinkedListFunction<Integer> tempNode=(LinkedListFunction<Integer>) headNode;
+		Stream.Builder<Integer> key_stream=Stream.builder();
+		while(tempNode!=null && tempNode.getNextNode()!=null) {
+			key_stream.accept(tempNode.getKey());
+		}
+		
+		//Sorting using streams and passing to arraylist
+		ArrayList<Integer> nodes= (ArrayList<Integer>) ((Stream) key_stream)
+				.sorted((key1,key2)->
+						((Integer) key1).compareTo((Integer) key2))
+				.collect(Collectors.toList());
+		
+		LinkedListNode<Integer> head = new LinkedListNode<Integer>(nodes.get(0));
+		nodes.remove(0);
+		headNode=(LinkedListFunction<Key>) head;
+		add(headNode);
+		for(int keys:nodes) {
+			LinkedListNode<Integer> node = new LinkedListNode<Integer>(keys);
+			append((LinkedListFunction<Key>) node);
+		}
 	}
 }
