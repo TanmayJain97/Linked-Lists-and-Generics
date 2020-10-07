@@ -25,7 +25,18 @@ public class LinkedListClass<Key> {
 			(this.headNode).setNextNode(tempNode);
 		}
 	}
-
+	
+	public void showList(){
+		System.out.print("Linked List = ");
+		LinkedListFunction<Key> tempNode=headNode;
+		do {
+			System.out.print(tempNode.getKey());
+			if (!tempNode.equals(tailNode)) System.out.print("->");
+			tempNode=tempNode.getNextNode();
+		}while(tempNode.getNextNode() != null);
+		System.out.println(tempNode.getKey());
+	}
+	
 	public void append(LinkedListFunction<Key> newNode) {
 
 		if(this.headNode==null) {
