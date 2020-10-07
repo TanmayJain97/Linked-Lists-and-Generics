@@ -1,5 +1,7 @@
 # Linked-Lists-and-Generics
 
-Modified to UC 4 - Created Linked List by adding 56.
+Modified to UC 5 - Created Linked List by adding 56.
 
-30 and 70 are appended to same list sequentially.
+70 is appended to same list.
+
+30 is then inserted between 56 and 70.
