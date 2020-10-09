@@ -1,7 +1,7 @@
 # Linked-Lists-and-Generics
 
-Modified to UC 10 - Created Linked List by adding 56.
+Modified to UC 10 - Created Linked List by adding 56,
 
-30, 40 and 70 is appended to same list sequentially.
+30, 40 and 70 to same list sequentially. Internally called method
 
-Then Linked List is sorted using streams.sorted()
+will add in a sorted manner.
