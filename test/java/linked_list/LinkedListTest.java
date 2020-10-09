@@ -22,20 +22,12 @@ public class LinkedListTest {
 		LinkedList = new LinkedListClass<Integer>();
 		
 		//Appending
-		LinkedList.add(Node1);
-		LinkedList.append(Node2);
-		LinkedList.append(Node3);
-		LinkedList.append(Node4);
+		LinkedList.makeOrderedList(Node1);
+		LinkedList.makeOrderedList(Node2);
+		LinkedList.makeOrderedList(Node3);
+		LinkedList.makeOrderedList(Node4);
 		
-		//Display Original List
-		System.out.print("Original List=");
-		LinkedList.showList();
-		
-		//Deleting node 40
-		LinkedList.makeOrderedList();
-		
-		//Display New List
-		System.out.print("Original List=");
+		//Display List
 		LinkedList.showList();
 	}
 	
@@ -47,6 +39,6 @@ public class LinkedListTest {
 	
 	@Test
 	public void TailNodeShouldBe70() {
-		assertEquals(Node4,LinkedList.tailNode);
+		assertEquals(Node4.getNextNode(),LinkedList.tailNode);
 	}
 }
